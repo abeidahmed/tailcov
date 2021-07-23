@@ -1,12 +1,18 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-# Specify your gem's dependencies in tailcov.gemspec.
 gemspec
 
+gem "bootsnap", ">= 1.4.2", require: false
+gem "view_component", path: ENV["VIEW_COMPONENT_PATH"] if ENV["VIEW_COMPONENT_PATH"]
+gem "view_component_storybook"
+
 group :development do
-  gem 'sqlite3'
+  gem "rubocop", "~> 1.18", ">= 1.18.4"
+  gem "sqlite3"
 end
 
-# To use a debugger
-# gem 'byebug', group: [:development, :test]
+group :development, :test do
+  gem "byebug"
+  gem "capybara", "~> 3.35", ">= 3.35.3"
+end

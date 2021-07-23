@@ -1,4 +1,4 @@
-require_relative "lib/tailcov/version"
+require_relative "lib/tailcov/version" # rubocop:disable Gemspec/RequiredRubyVersion
 
 Gem::Specification.new do |spec|
   spec.name        = "tailcov"
@@ -19,4 +19,9 @@ Gem::Specification.new do |spec|
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   spec.add_dependency "rails", "~> 6.1.4"
+  spec.add_dependency "view_component", [">= 2.0.0", "< 3.0"]
+
+  spec.add_development_dependency "byebug"
+  spec.add_development_dependency "capybara", "~> 3.35", ">= 3.35.3"
+  spec.add_development_dependency "rubocop", "~> 1.18", ">= 1.18.4"
 end

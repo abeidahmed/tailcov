@@ -10,7 +10,12 @@
     "webpack-cli": "^3.3.12"
   },
   "version": "0.1.0",
+  "scripts": {
+    "storybook": "start-storybook"
+  },
   "devDependencies": {
+    "@storybook/addon-controls": "^6.3.5",
+    "@storybook/server": "^6.3.5",
     "webpack-dev-server": "^3.11.2"
   }
 }

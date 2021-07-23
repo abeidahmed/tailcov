@@ -39,3 +39,6 @@ dummy/node_modules
 dummy/yarn-error.log
 dummy/yarn-debug.log*
 dummy/.yarn-integrity
+
+# Ignore stories
+**/*.stories.json
