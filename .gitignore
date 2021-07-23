@@ -1,0 +1,41 @@
+/.bundle/
+/doc/
+/log/*.log
+/pkg/
+/tmp/
+.byebug_history
+
+# Ignore bundler config.
+dummy/.bundle
+
+# Ignore the default SQLite database.
+dummy/db/*.sqlite3
+dummy/db/*.sqlite3-*
+
+# Ignore all logfiles and tempfiles.
+dummy/log/*
+dummy/tmp/*
+dummy/log/.keep
+dummy/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+dummy/tmp/pids/*
+dummy/tmp/pids/
+dummy/tmp/pids/.keep
+
+# Ignore uploaded files in development.
+dummy/storage/*
+dummy/!/storage/.keep
+
+dummy/public/assets
+dummy/.byebug_history
+
+# Ignore master key for decrypting credentials and more.
+dummy/config/master.key
+
+dummy/public/packs
+dummy/public/packs-test
+dummy/node_modules
+dummy/yarn-error.log
+dummy/yarn-debug.log*
+dummy/.yarn-integrity
