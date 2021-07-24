@@ -1,8 +1,4 @@
-require "test_helper"
-
-class ButtonComponentTest < ViewComponent::TestCase
-  include ClassesHelper
-
+class ButtonComponentTest < ApplicationComponentTest
   def test_renders_content
     render_inline(Tailcov::ButtonComponent.new) { "content" }
 

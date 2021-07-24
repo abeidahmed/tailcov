@@ -14,8 +14,7 @@
   "version": "0.1.0",
   "scripts": {
     "storybook": "start-storybook -p 5000",
-    "build-storybook": "build-storybook -o public/tailcov/stories --preview-url=/tailcov/stories/iframe.html --force-build-preview",
-    "build": "yarn build-storybook"
+    "storybook:build": "build-storybook -o public/tailcov/stories --preview-url=/tailcov/stories/iframe.html --force-build-preview"
   },
   "devDependencies": {
     "@storybook/addon-controls": "^6.3.5",
