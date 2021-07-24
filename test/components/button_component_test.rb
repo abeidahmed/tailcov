@@ -42,4 +42,16 @@ class ButtonComponentTest < ApplicationComponentTest
 
     assert_selector("button[href='example.com']")
   end
+
+  def test_defaults_to_medium_if_unknown_size
+    render_inline(Tailcov::ButtonComponent.new(size: "unknown")) { "content" }
+
+    assert_classes("px-4 py-2 text-sm leading-5")
+  end
+
+  def test_defaults_to_default_variant_if_unknown_variant
+    render_inline(Tailcov::ButtonComponent.new(variant: "unknown")) { "content" }
+
+    assert_classes("border-gray-300 bg-white text-gray-700")
+  end
 end
