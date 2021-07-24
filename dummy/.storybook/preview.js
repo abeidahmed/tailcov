@@ -7,4 +7,5 @@ export const parameters = {
       method: "alphabetical",
     },
   },
+  layout: "centered",
 };
