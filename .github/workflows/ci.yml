@@ -1,0 +1,28 @@
+name: CI
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby: 3.0
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Setup Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+
+      - name: Install Dependencies
+        run: |
+          gem update --system
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+      - name: Tests
+        run: bundle exec rake
+      - name: Linters
+        run: bundle exec rubocop
