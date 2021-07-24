@@ -28,6 +28,7 @@ dummy/storage/*
 dummy/!/storage/.keep
 
 dummy/public/assets
+dummy/public/tailcov
 dummy/.byebug_history
 
 # Ignore master key for decrypting credentials and more.
