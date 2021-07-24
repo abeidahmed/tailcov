@@ -1,9 +1,9 @@
 require "view_component"
-Dir[File.join(File.dirname(__FILE__), "../../helpers/tailcov/**/*.rb")].each { |f| require f }
+require "tailcov/helpers"
 
 module Tailcov
   class ApplicationComponent < ViewComponent::Base
-    include ClassNamesHelper
+    include Helpers::ClassNames
 
     def initialize(tag: nil, classes: nil, **options)
       @tag = tag
