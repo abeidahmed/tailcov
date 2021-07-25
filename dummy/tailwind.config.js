@@ -1,5 +1,9 @@
 module.exports = {
-  purge: [],
+  purge: {
+    enabled: true,
+    preserveHtmlElements: false,
+    content: ["../app/components/**/*.{html.erb,rb}"],
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
@@ -8,4 +12,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};

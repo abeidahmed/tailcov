@@ -11,7 +11,7 @@ gem "sass-rails", ">= 6"
 gem "sqlite3", "~> 1.4"
 gem "tailcov", path: "../"
 gem "view_component_storybook"
-gem "webpacker", "~> 5.0"
+gem "webpacker", "~> 5.4.0"
 
 group :development do
   gem "listen", "~> 3.3"

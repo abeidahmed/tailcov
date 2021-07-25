@@ -6,15 +6,19 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.0",
-    "autoprefixer": "^9",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.2.10",
+    "postcss-loader": "^4.0.3",
+    "sass": "^1.32.7",
+    "tailwindcss": "^2.2.7",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
   },
   "version": "0.1.0",
   "scripts": {
     "storybook": "start-storybook -p 5000",
-    "storybook:build": "build-storybook -o public/tailcov/stories --preview-url=/tailcov/stories/iframe.html --force-build-preview"
+    "storybook:build": "build-storybook -o public/tailcov/stories --preview-url=/tailcov/stories/iframe.html --force-build-preview",
+    "tailwind:build": "npx tailwindcss -i ./app/javascript/packs/application.scss -o ../app/assets/stylesheets/tailcov.css --minify"
   },
   "devDependencies": {
     "@storybook/addon-controls": "^6.3.5",
