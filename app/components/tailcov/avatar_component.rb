@@ -1,12 +1,13 @@
 module Tailcov
   class AvatarComponent < ApplicationComponent
     DEFAULT_SIZE = :md
-    SIZE_OPTIONS = [:sm, DEFAULT_SIZE, :lg].freeze
 
     SIZE_CLASSES = {
-      sm: "w-6 h-6",
-      md: "w-8 h-8",
-      lg: "w-10 h-10"
+      :xxs => "w-6 h-6",
+      :xs => "w-7 h-7",
+      :sm => "w-8 h-8",
+      DEFAULT_SIZE => "w-9 h-9",
+      :lg => "w-10 h-10"
     }.freeze
 
     def initialize(src:, alt:, size: DEFAULT_SIZE, circular: true, **options)
@@ -17,7 +18,7 @@ module Tailcov
 
       @options[:classes] = class_names(
         options[:classes],
-        SIZE_CLASSES[fetch_or_fallback(SIZE_CLASSES.keys, given_value: size, fallback: DEFAULT_SIZE)],
+        fetch_or_fallback(SIZE_CLASSES, given_value: size, fallback: DEFAULT_SIZE),
         "inline-block",
         rounded: !circular,
         "rounded-full": circular,
