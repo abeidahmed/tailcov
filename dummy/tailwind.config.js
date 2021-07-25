@@ -1,6 +1,6 @@
 module.exports = {
   purge: {
-    enabled: true,
+    enabled: process.env.PRODUCTION,
     preserveHtmlElements: false,
     content: ["../app/components/**/*.{html.erb,rb}"],
   },
