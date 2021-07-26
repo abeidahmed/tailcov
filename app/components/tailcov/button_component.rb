@@ -4,7 +4,7 @@ module Tailcov
     DEFAULT_SIZE = :md
 
     VARIANT_CLASSES = {
-      DEFAULT_VARIANT => "border-gray-300 bg-white text-gray-700 hover:bg-gray-50",
+      DEFAULT_VARIANT => "border-gray-300 bg-white text-gray-700 hover:bg-gray-100",
       :primary => "bg-indigo-600 text-white hover:bg-indigo-700",
       :danger => "bg-red-600 text-white hover:bg-red-700"
     }.freeze
